@@ -94,11 +94,11 @@ def add_songs_features_run_all(df):
 def apply_scale_umap(df:pd.DataFrame):
     
     #Scaling
-    with open('pickle/scaler.pkl', "rb") as file:
+    with open('scaler.pkl', "rb") as file:
         loaded_scaler = pickle.load(file)
         scale_df = loaded_scaler.transform(df)
     #UMAP
-    with open('pickle/umap.pkl', "rb") as file:
+    with open('umap.pkl', "rb") as file:
         loaded_umap = pickle.load(file)
         umap_df = loaded_umap.transform(df)
         
